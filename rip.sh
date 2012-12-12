@@ -10,3 +10,7 @@ python rby-stats.py games/en/yellow.gb > data/yellow/stats
 python gbc-stats.py games/en/gold.gbc > data/gold/stats
 python gbc-stats.py games/en/silver.gbc > data/silver/stats
 python gbc-stats.py games/en/crystal.gbc > data/crystal/stats
+
+python rby-moves.py games/en/red.gb > data/red/moves
+python rby-moves.py games/en/blue.gb > data/blue/moves
+python rby-moves.py games/en/yellow.gb > data/yellow/moves
