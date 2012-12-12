@@ -1,6 +1,4 @@
-redo-ifchange rby-stats.py gbc-stats.py
-redo-ifchange games/en/{red,blue,yellow}.gb
-redo-ifchange games/en/{gold,silver,crystal}.gbc
+set -eu
 
 mkdir -p data/{red,blue,yellow}
 mkdir -p data/{gold,silver,crystal}
