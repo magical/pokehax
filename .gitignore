@@ -1,2 +1,4 @@
 *.gb
-/.redo
+*.gbc
+
+.redo

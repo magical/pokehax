@@ -1,6 +1,6 @@
-"""Dump pokemon base stats from gameboy Pokemon games
+"""Dump pokemon base stats from Generation II Pokemon games
 
-http://bulbapedia.bulbagarden.net/wiki/Pokémon_base_stats_data_structure_in_Generation_I"""
+http://bulbapedia.bulbagarden.net/wiki/Pokémon_base_stats_data_structure_in_Generation_II"""
 
 
 from __future__ import print_function
@@ -12,9 +12,10 @@ from struct import pack, unpack
 from struct import Struct
 
 BULBASAUR_STATS = pack("<BBBBBB", 1, 45, 49, 49, 45, 65)
-MAX_POKEMON = 150
+MAX_POKEMON = 251
 
-stat_struct = Struct("<BBBBBBBBBBBHH4BBQ")
+# n, stats, types, catch rate & exp yield, items, gender & unknown & hatch counter & unknown, sprite dims. & blank & blank, growth & egg groups, tms
+stat_struct = Struct("<B BBBBBB 2B BB 2B BBBB BHH BB Q")
 
 filename, = sys.argv[1:]
 
@@ -29,13 +30,9 @@ except ValueError:
     print("Could not find start of stats. Is this really a pokemon game?", file=sys.stderr)
     sys.exit(1)
 
-#fmt = "{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\t0x{10:X}\t0x{11:X}\t0x{12:X}\t{13}\t{14}\t{15}\t{16}\t{17}\t{18:064b}"
-#fmt = "{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\t{17}"
-
 p = base
 for n in range(MAX_POKEMON):
     stats = stat_struct.unpack(data[p:p+stat_struct.size])
     p += stat_struct.size
 
-    #print(fmt.format(*stats))
     print(*stats, sep="\t")
