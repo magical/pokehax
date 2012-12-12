@@ -7,9 +7,9 @@ python rby-stats.py games/en/red.gb > data/red/stats
 python rby-stats.py games/en/blue.gb > data/blue/stats
 python rby-stats.py games/en/yellow.gb > data/yellow/stats
 
-python gbc-stats.py games/en/gold.gbc > data/gold/stats
-python gbc-stats.py games/en/silver.gbc > data/silver/stats
-python gbc-stats.py games/en/crystal.gbc > data/crystal/stats
+python gsc-stats.py games/en/gold.gbc > data/gold/stats
+python gsc-stats.py games/en/silver.gbc > data/silver/stats
+python gsc-stats.py games/en/crystal.gbc > data/crystal/stats
 
 python rby-moves.py games/en/red.gb > data/red/moves
 python rby-moves.py games/en/blue.gb > data/blue/moves
