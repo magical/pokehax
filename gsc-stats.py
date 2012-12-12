@@ -8,8 +8,7 @@ from __future__ import unicode_literals
 
 import sys
 
-from struct import pack, unpack
-from struct import Struct
+from struct import Struct, pack, unpack
 
 BULBASAUR_STATS = pack("<BBBBBB", 1, 45, 49, 49, 45, 65)
 MAX_POKEMON = 251
