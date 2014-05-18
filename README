@@ -1,0 +1,6 @@
+This is a project i started a while ago and sort of forgot about.
+The goal was just to dump data from the Pokémon games into simple text files,
+without modifying or interpreting it any way. The benefit of text is that it
+can be studied and analysed by eye and by the usual unix tools.
+I didn't want to interpret the data because doing so can introduce errors, and
+the point is for the data to be as raw as possible.
