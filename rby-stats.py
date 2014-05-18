@@ -13,7 +13,17 @@ from struct import Struct, pack, unpack
 BULBASAUR_STATS = pack("<BBBBBB", 1, 45, 49, 49, 45, 65)
 MAX_POKEMON = 150
 
-stat_struct = Struct("<BBBBBBBBBBBHH4BBQ")
+# 0 number
+# 1 base stats
+# 6 types
+# 8 catch rate
+# 9 base exp
+# 10 sprite dimensions
+# 11 sprite pointers
+# 15 level 1 moves
+# 19 growth rate
+# 20 tms
+stat_struct = Struct("<B BBBBB BB BB BHH 4BBQ")
 
 filename, = sys.argv[1:]
 
